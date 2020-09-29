@@ -1,0 +1,21 @@
+<p><a routerLink="/list">Обратно к списку</a></p>
+<div>
+  <form [formGroup]="userForm">
+    <ul>
+      <li><label>ФИО<input formControlName="name"/></label></li>
+      <li><label>Почта<input formControlName="email"/></label></li>
+      <li>Адрес:
+        <ul formGroupName="address">
+          <li><label>Улица<input formControlName="street"/></label></li>
+          <li><label>Дом<input formControlName="suite"/></label></li>
+          <li><label>Город<input formControlName="city"/></label></li>
+          <li><label>Индекс<input formControlName="zip"/></label></li>
+        </ul>
+      </li>
+      <li><label>Телефон<input formControlName="phone"/></label></li>
+      <li><label>Веб сайт<input formControlName="website"/></label></li>
+      <li><label>Компания<span>{{userForm.controls.company.value | json}}</span></label></li>
+    </ul>
+  </form>
+</div>
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>

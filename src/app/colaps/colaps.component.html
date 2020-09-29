@@ -1,0 +1,6 @@
+<div *ngIf="!expanded" (click)="toggleExpand()">
+  Нажми для разворачивания...
+</div>
+<div *ngIf="expanded" (click)="toggleExpand()">
+  {{mainText}}
+</div>

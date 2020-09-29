@@ -1,0 +1,22 @@
+table, td, th {
+  border-style: solid;
+  border-width: 1px;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+}
+.title {
+  width: 200px;
+}
+
+.main {
+  width: max-content;
+}
+
+.knopa {
+  vertical-align: center;
+  text-align: center;
+  width: 80px;
+}

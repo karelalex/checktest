@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>
+        Заголовок
+    </th>
+    <th>
+      Содержимое
+    </th>
+    <th>
+      Переход
+    </th>
+  </tr>
+  <tr *ngFor="let user of userList">
+    <td class="title">{{user.title}}</td>
+    <td class="main"><app-colaps [mainText]="user.body"></app-colaps></td>
+    <td class="knopa"><button (click)="goToInfo(user.id)">К инфе</button></td>
+  </tr>
+</table>
