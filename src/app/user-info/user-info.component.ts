@@ -1,22 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
 import {UserserviceService} from '../userservice.service';
 
-interface User{
+export interface User{
   'id': number;
   'name': string;
-  'username': string;
   'email': string;
   'address': {
     'street': string,
     'suite': string
     'city': string
     'zipcode': string
-    'geo': {
-      'lat': string
-      'lng': string
-    }
   };
   'phone': string;
   'website': string;
@@ -39,7 +34,7 @@ export class UserInfoComponent implements OnInit {
 
   userForm: FormGroup = new FormGroup({
     name: new FormControl(''),
-    email: new FormControl(),
+    email: new FormControl('', Validators.email),
     address: new FormGroup({
       street: new FormControl(),
       suite: new FormControl(),
@@ -52,7 +47,7 @@ export class UserInfoComponent implements OnInit {
   });
   ngOnInit(): void {
     this.serv.loadInfo(this.route.snapshot.params.id).subscribe(
-      (data: User): void => {
+      (data): void => {
         this.userForm.patchValue({
           name: data.name,
           email: data.email,

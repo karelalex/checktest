@@ -17,3 +17,8 @@ label span {
 input {
   margin-left: 15px;
 }
+
+.mistake {
+  color: red;
+  font-weight: bold;
+}

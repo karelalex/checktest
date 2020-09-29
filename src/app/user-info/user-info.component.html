@@ -3,7 +3,8 @@
   <form [formGroup]="userForm">
     <ul>
       <li><label>ФИО<input formControlName="name"/></label></li>
-      <li><label>Почта<input formControlName="email"/></label></li>
+      <li><label>Почта<input formControlName="email"/></label>
+        <span *ngIf="userForm.controls.email.invalid" class="mistake">Ошибка почты</span> </li>
       <li><span class="label">Адрес:</span>
         <ul formGroupName="address">
           <li><label>Улица<input formControlName="street"/></label></li>

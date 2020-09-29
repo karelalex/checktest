@@ -6,13 +6,10 @@ import {UserserviceService} from '../userservice.service';
   templateUrl: './colaps.component.html',
   styleUrls: ['./colaps.component.css']
 })
-export class ColapsComponent implements OnInit {
+export class ColapsComponent {
   expanded = false;
   @Input() mainText;
   constructor(private serv: UserserviceService) { }
-
-  ngOnInit(): void {
-  }
 
   toggleExpand(): void {
     this.expanded = !this.expanded;

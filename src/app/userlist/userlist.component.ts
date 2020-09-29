@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserserviceService} from '../userservice.service';
 import {Router} from '@angular/router';
 
-interface UserListItem {
+export interface UserListItem {
   'id': number;
   'title': string;
   'body': string;
