@@ -4,9 +4,14 @@
   color: red;
 }
 
-label {
+.label, label {
   font-weight: bold;
   background-color: lightgray;
+}
+
+label span {
+  font-weight: normal;
+  background-color: white;
 }
 
 input {
