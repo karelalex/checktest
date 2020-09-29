@@ -3,3 +3,12 @@
   font-weight: bold;
   color: red;
 }
+
+label {
+  font-weight: bold;
+  background-color: lightgray;
+}
+
+input {
+  margin-left: 15px;
+}

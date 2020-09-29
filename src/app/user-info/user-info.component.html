@@ -14,7 +14,7 @@
       </li>
       <li><label>Телефон<input formControlName="phone"/></label></li>
       <li><label>Веб сайт<input formControlName="website"/></label></li>
-      <li><label>Компания<span>{{userForm.controls.company.value | json}}</span></label></li>
+      <li><label>Компания <span>{{userForm.controls.company.value ? userForm.controls.company.value.name : ' '}}</span></label></li>
     </ul>
   </form>
 </div>
